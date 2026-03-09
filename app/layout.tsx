@@ -8,6 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: "Eddie Zhuang",
   description: "Computer science at McMaster",
+  metadataBase: new URL('https://eddiezhuang.com'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
