@@ -53,7 +53,7 @@ export function ContactForm() {
           message: "Failed to send message. Please try again.",
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Something went wrong. Please try again later.",
