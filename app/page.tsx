@@ -23,7 +23,16 @@ export default function Home() {
         <div>
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <p className="mt-1 text-muted">
-            cs @ mcmaster · incoming @{" "}
+            cs @{" "}
+            <a
+              href="https://www.mcmaster.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground transition-colors"
+            >
+              mcmaster
+            </a>{" "}
+            · incoming @{" "}
             <a
               href="https://bondbl.com"
               target="_blank"
