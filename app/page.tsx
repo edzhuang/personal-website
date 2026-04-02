@@ -43,11 +43,18 @@ export default function Home() {
         </h2>
         <div className="mt-6 space-y-6">
           {experiences.map((exp) => (
-            <div key={exp.title}>
+            <div key={`${exp.company}-${exp.title}`}>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="font-medium">
-                  {exp.title}{" "}
-                  <span className="text-muted font-normal">@ {exp.company}</span>
+                  <a
+                    href={exp.companyHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground underline underline-offset-4 hover:text-muted transition-colors"
+                  >
+                    {exp.company}
+                  </a>{" "}
+                  <span className="text-muted font-normal">{exp.title}</span>
                 </p>
                 <span className="text-sm text-muted shrink-0">{exp.date}</span>
               </div>
