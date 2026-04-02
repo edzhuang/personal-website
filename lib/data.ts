@@ -7,14 +7,6 @@ export const experiences = [
     description:
       "implemented genetic algorithm techniques for reinforcement learning tasks",
   },
-  {
-    title: "technology executive",
-    company: "yrhacks",
-    companyHref: "https://yrhacks.ca",
-    date: "2022 – 2023",
-    description:
-      "developed a discord bot and assisted with the website for york region's student hackathon",
-  },
 ];
 
 export const projects = [
