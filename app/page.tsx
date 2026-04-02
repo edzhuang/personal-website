@@ -24,9 +24,12 @@ const socialLinks = [
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-16 md:py-24 animate-fade-in">
-      <header className="flex items-start justify-between">
-        <div>
+      <header>
+        <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
+          <ThemeToggle />
+        </div>
+        <div>
           <p className="mt-1 text-muted">
             cs @{" "}
             <a
@@ -50,7 +53,6 @@ export default function Home() {
             </a>
           </p>
         </div>
-        <ThemeToggle />
       </header>
 
       <section className="mt-16">
