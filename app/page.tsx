@@ -31,8 +31,10 @@ export default function Home() {
               className="underline underline-offset-4 hover:text-foreground transition-colors"
             >
               mcmaster
-            </a>{" "}
-            · incoming @{" "}
+            </a>
+          </p>
+          <p className="text-muted">
+            incoming @{" "}
             <a
               href="https://bondbl.com"
               target="_blank"
