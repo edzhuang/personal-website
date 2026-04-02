@@ -1,13 +1,12 @@
 import { ThemeToggle } from "@/components/theme-toggle";
 import { experiences, projects } from "@/lib/data";
-import { Mail } from "lucide-react";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { MailIcon, GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 const WEBRING_URL = "https://mac-csse-webring.vercel.app/";
 const MY_SITE = "eddiezhuang.com";
 
 const socialLinks = [
-  { href: "mailto:zhuang.eddie@gmail.com", icon: Mail, label: "Email" },
+  { href: "mailto:zhuang.eddie@gmail.com", icon: MailIcon, label: "Email" },
   { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "GitHub" },
   { href: "https://www.linkedin.com/in/eddie-zhuang", icon: LinkedInIcon, label: "LinkedIn" },
   { href: "https://x.com/edzhuan", icon: XIcon, label: "X" },
@@ -20,14 +19,14 @@ export default function Home() {
         <div>
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <p className="mt-1 text-muted">
-            cs @ mcmaster ·{" "}
+            cs @ mcmaster · incoming @{" "}
             <a
               href="https://bondbl.com"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 hover:text-foreground transition-colors"
             >
-              incoming @ bond
+              bond
             </a>
           </p>
         </div>
