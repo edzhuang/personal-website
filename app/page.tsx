@@ -6,7 +6,12 @@ const WEBRING_URL = "https://mac-csse-webring.vercel.app/";
 const MY_SITE = "eddiezhuang.com";
 
 const socialLinks = [
-  { href: "mailto:zhuang.eddie@gmail.com", icon: MailIcon, label: "email" },
+  {
+    href: "mailto:zhuang.eddie@gmail.com",
+    icon: MailIcon,
+    label: "email",
+    iconClassName: "size-5",
+  },
   { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "github" },
   {
     href: "https://www.linkedin.com/in/eddie-zhuang",
@@ -99,7 +104,7 @@ export default function Home() {
       <footer className="mt-24 border-t border-foreground/10 pt-6 pb-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {socialLinks.map(({ href, icon: Icon, label }) => (
+            {socialLinks.map(({ href, icon: Icon, label, iconClassName }) => (
               <a
                 key={label}
                 href={href}
@@ -108,7 +113,7 @@ export default function Home() {
                 className="text-muted hover:text-foreground transition-colors"
                 aria-label={label}
               >
-                <Icon className="size-4" />
+                <Icon className={iconClassName ?? "size-4"} />
               </a>
             ))}
           </div>
