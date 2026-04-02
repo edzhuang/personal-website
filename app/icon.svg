@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="e favicon">
+  <circle cx="32" cy="32" r="30" fill="#000000" />
+  <text
+    x="50%"
+    y="52%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="#ffffff"
+    font-family="Geist, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="34"
+    font-weight="500"
+  >
+    e
+  </text>
+</svg>

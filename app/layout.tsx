@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "eddie zhuang",
+  icons: {
+    icon: "/icon.svg",
+  },
   description: "cs @ mcmaster · incoming @ bond",
   metadataBase: new URL("https://eddiezhuang.com"),
   openGraph: {
