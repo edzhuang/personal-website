@@ -38,7 +38,7 @@ export default function Home() {
       </header>
 
       <section className="mt-16">
-        <h2 className="text-sm font-medium text-muted tracking-widest">
+        <h2 className="text-base font-medium text-muted tracking-normal">
           experience
         </h2>
         <div className="mt-6 space-y-6">
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16">
-        <h2 className="text-sm font-medium text-muted tracking-widest">
+        <h2 className="text-base font-medium text-muted tracking-normal">
           projects
         </h2>
         <div className="mt-6 space-y-6">
