@@ -5,15 +5,15 @@ import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(isDarkMode ? "light" : "dark")}
       className="text-foreground/60 hover:text-foreground transition-colors cursor-pointer"
       aria-label="toggle theme"
     >
-      <Sun className="hidden size-5 dark:block" />
-      <Moon className="block size-5 dark:hidden" />
+      {isDarkMode ? <Moon className="size-5" /> : <Sun className="size-5" />}
     </button>
   );
 }
