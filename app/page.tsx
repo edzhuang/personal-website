@@ -54,7 +54,7 @@ export default function Home() {
                   >
                     {exp.company}
                   </a>{" "}
-                  <span className="text-muted font-normal">· {exp.title}</span>
+                  <span className="text-muted font-normal">{exp.title}</span>
                 </p>
                 <span className="text-sm text-muted shrink-0">{exp.date}</span>
               </div>
