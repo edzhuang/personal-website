@@ -1,128 +1,126 @@
-"use client";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { experiences, projects } from "@/lib/data";
+import { Mail } from "lucide-react";
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
-import { ContactForm } from "@/components/contact-form";
-import { ProjectCard } from "@/components/ui/project-card";
-import { ExperienceItem } from "@/components/ui/experience-item";
-import { AboutItem } from "@/components/ui/about-item";
-import { Footer } from "@/components/footer";
-import { ScrollFade } from "@/components/ui/scroll-fade";
-import { Header } from "@/components/ui/header";
-import { projectLinks } from "@/lib/navigation";
+const WEBRING_URL = "https://mac-csse-webring.vercel.app/";
+const MY_SITE = "eddiezhuang.com";
+
+const socialLinks = [
+  { href: "mailto:zhuang.eddie@gmail.com", icon: Mail, label: "Email" },
+  { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/eddie-zhuang", icon: LinkedInIcon, label: "LinkedIn" },
+  { href: "https://x.com/edzhuan", icon: XIcon, label: "X" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative">
-      {/* Minimal grid background like Stripe */}
-      <div className="absolute inset-0 pointer-events-none px-4">
-        <div className="container relative w-full h-full">
-          {/* 5 vertical lines */}
-          <div className="absolute left-0 h-full border-l" />
-          <div className="absolute left-1/4 h-full border-l border-dashed hidden md:block" />
-          <div className="absolute left-2/4 h-full border-l border-dashed hidden md:block" />
-          <div className="absolute left-3/4 h-full border-l border-dashed hidden md:block" />
-          <div className="absolute right-0 h-full border-l" />
+    <main className="mx-auto w-full max-w-2xl px-6 py-16 md:py-24 animate-fade-in">
+      <header className="flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
+          <p className="mt-1 text-muted">
+            cs @ mcmaster ·{" "}
+            <a
+              href="https://bondbl.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground transition-colors"
+            >
+              incoming @ bond
+            </a>
+          </p>
         </div>
-      </div>
+        <ThemeToggle />
+      </header>
 
-      {/* Header/Navigation - Floating with blur effect */}
-      <Header />
-
-      {/* Content Container */}
-      <div className="w-full px-4">
-        <div className="container flex flex-col">
-          {/* Hero Section */}
-          <ScrollFade delay={1}>
-            <section className="flex flex-col gap-3 pt-32 md:pt-36 pb-12 md:pb-16 text-center md:text-left">
-              <h1 className="text-heading-lg md:text-heading-xl">
-                Eddie Zhuang
-              </h1>
-              <p className="text-heading-sm md:text-heading-md text-muted-foreground">
-                Computer science at McMaster
-              </p>
-            </section>
-          </ScrollFade>
-          {/* About Section */}
-          <ScrollFade delay={2}>
-            <section className="flex flex-col gap-8 py-6 md:py-8">
-              <h2 id="about" className="text-heading-md md:text-heading-lg">
-                About
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-                <AboutItem text="I'm a computer science student at McMaster University" />
-                <AboutItem text="I have experience with full-stack development and machine learning" />
-                <AboutItem text="Right now, I'm working on full-stack projects and searching for software engineering internships" />
-                <AboutItem text="In the past, I've worked with genetic algorithms as a research assistant and organized a hackathon" />
-              </div>
-            </section>
-          </ScrollFade>
-          {/* Experience Section */}
-          <ScrollFade delay={3}>
-            <section className="flex flex-col gap-8 py-12 md:py-16">
-              <h2
-                id="experience"
-                className="text-heading-md md:text-heading-lg"
-              >
-                Experience
-              </h2>
-              <div className="flex flex-col gap-16">
-                <ExperienceItem
-                  years="2024"
-                  organization="McMaster University"
-                  title="Research Assistant"
-                  description="Implemented genetic algorithm techniques for reinforcement learning tasks"
-                  imageUrl="/images/mcmaster.png"
-                />
-                <ExperienceItem
-                  years="2022 - 2023"
-                  organization="YRHacks"
-                  title="Technology Executive"
-                  description="Developed a Discord bot and assisted with the website for the York Region's student hackathon"
-                  imageUrl="/images/yrhacks.png"
-                />
-              </div>
-            </section>
-          </ScrollFade>
-          {/* Projects Section */}
-          <ScrollFade delay={4}>
-            <section className="flex flex-col gap-8 py-12 md:py-16">
-              <h2 id="projects" className="text-heading-md md:text-heading-lg">
-                Projects
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
-                {projectLinks.map((project) => (
-                  <ProjectCard
-                    key={project.href}
-                    title={project.label}
-                    description={project.description}
-                    imageUrl={project.imageUrl}
-                    url={project.href}
-                  />
-                ))}
-              </div>
-            </section>
-          </ScrollFade>
-          {/* Contact Section */}
-          <ScrollFade delay={5}>
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-28 md:py-32">
-              <div className="flex flex-col gap-4">
-                <h2 id="contact" className="text-heading-md md:text-heading-lg">
-                  Contact
-                </h2>
-                <p className="text-body-sm md:text-body-md text-muted-foreground mb-2">
-                  Have an opportunity in mind, or just want to chat? <br />
-                  Feel free to send me a message.
+      <section className="mt-16">
+        <h2 className="text-sm font-medium text-muted uppercase tracking-widest">
+          experience
+        </h2>
+        <div className="mt-6 space-y-6">
+          {experiences.map((exp) => (
+            <div key={exp.title}>
+              <div className="flex items-baseline justify-between gap-4">
+                <p className="font-medium">
+                  {exp.title}{" "}
+                  <span className="text-muted font-normal">@ {exp.company}</span>
                 </p>
+                <span className="text-sm text-muted shrink-0">{exp.date}</span>
               </div>
-              <ContactForm />
-            </section>
-          </ScrollFade>
+              <p className="mt-1 text-sm text-muted">{exp.description}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
 
-      {/* Footer */}
-      <div className="w-full px-4">
-        <Footer />
-      </div>
-    </div>
+      <section className="mt-16">
+        <h2 className="text-sm font-medium text-muted uppercase tracking-widest">
+          projects
+        </h2>
+        <div className="mt-6 space-y-6">
+          {projects.map((project) => (
+            <div key={project.name}>
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium underline underline-offset-4 hover:text-muted transition-colors"
+              >
+                {project.name}
+              </a>
+              <p className="mt-1 text-sm text-muted">{project.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="mt-24 border-t border-foreground/10 pt-6 pb-8">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {socialLinks.map(({ href, icon: Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-foreground transition-colors"
+                aria-label={label}
+              >
+                <Icon className="size-4" />
+              </a>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted">
+            <a
+              href={`${WEBRING_URL}#${MY_SITE}?nav=prev`}
+              className="hover:text-foreground transition-colors"
+              title="Previous site"
+            >
+              &larr;
+            </a>
+            <a
+              href={WEBRING_URL}
+              title="McMaster CS & SE Webring"
+              className="leading-none"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${WEBRING_URL}assets/Uni_mcmaster_logo.svg.png`}
+                alt="McMaster CS & SE Webring"
+                className="h-5 w-auto block dark:invert"
+              />
+            </a>
+            <a
+              href={`${WEBRING_URL}#${MY_SITE}?nav=next`}
+              className="hover:text-foreground transition-colors"
+              title="Next site"
+            >
+              &rarr;
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
