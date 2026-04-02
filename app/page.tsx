@@ -6,10 +6,14 @@ const WEBRING_URL = "https://mac-csse-webring.vercel.app/";
 const MY_SITE = "eddiezhuang.com";
 
 const socialLinks = [
-  { href: "mailto:zhuang.eddie@gmail.com", icon: MailIcon, label: "Email" },
-  { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "GitHub" },
-  { href: "https://www.linkedin.com/in/eddie-zhuang", icon: LinkedInIcon, label: "LinkedIn" },
-  { href: "https://x.com/edzhuan", icon: XIcon, label: "X" },
+  { href: "mailto:zhuang.eddie@gmail.com", icon: MailIcon, label: "email" },
+  { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "github" },
+  {
+    href: "https://www.linkedin.com/in/eddie-zhuang",
+    icon: LinkedInIcon,
+    label: "linkedin",
+  },
+  { href: "https://x.com/edzhuan", icon: XIcon, label: "x" },
 ];
 
 export default function Home() {
@@ -34,7 +38,7 @@ export default function Home() {
       </header>
 
       <section className="mt-16">
-        <h2 className="text-sm font-medium text-muted uppercase tracking-widest">
+        <h2 className="text-sm font-medium text-muted tracking-widest">
           experience
         </h2>
         <div className="mt-6 space-y-6">
@@ -54,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16">
-        <h2 className="text-sm font-medium text-muted uppercase tracking-widest">
+        <h2 className="text-sm font-medium text-muted tracking-widest">
           projects
         </h2>
         <div className="mt-6 space-y-6">
@@ -94,26 +98,26 @@ export default function Home() {
             <a
               href={`${WEBRING_URL}#${MY_SITE}?nav=prev`}
               className="hover:text-foreground transition-colors"
-              title="Previous site"
+              title="previous site"
             >
               &larr;
             </a>
             <a
               href={WEBRING_URL}
-              title="McMaster CS & SE Webring"
+              title="mcmaster cs & se webring"
               className="leading-none"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${WEBRING_URL}assets/Uni_mcmaster_logo.svg.png`}
-                alt="McMaster CS & SE Webring"
+                alt="mcmaster cs & se webring"
                 className="h-5 w-auto block dark:invert"
               />
             </a>
             <a
               href={`${WEBRING_URL}#${MY_SITE}?nav=next`}
               className="hover:text-foreground transition-colors"
-              title="Next site"
+              title="next site"
             >
               &rarr;
             </a>
