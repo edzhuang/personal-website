@@ -111,7 +111,7 @@ export default function Home() {
               <img
                 src={`${WEBRING_URL}assets/Uni_mcmaster_logo.svg.png`}
                 alt="mcmaster cs & se webring"
-                className="h-5 w-auto block dark:invert"
+                className="h-5 w-auto block grayscale dark:invert"
               />
             </a>
             <a
