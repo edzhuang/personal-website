@@ -35,7 +35,7 @@ export default function Home() {
               href="https://www.mcmaster.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="animated-underline text-foreground"
+              className="animated-underline text-foreground hover:text-muted"
             >
               mcmaster
             </a>
@@ -46,7 +46,7 @@ export default function Home() {
               href="https://bondbl.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="animated-underline text-foreground"
+              className="animated-underline text-foreground hover:text-muted"
             >
               bond
             </a>
