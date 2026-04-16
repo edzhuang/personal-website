@@ -3,7 +3,7 @@ export const experiences = [
     title: "research assistant",
     company: "mcmaster university",
     companyHref: "https://mcmaster.ca",
-    date: "2024",
+    date: "summer 2024",
     description:
       "implemented genetic algorithm techniques for reinforcement learning tasks",
   },

@@ -10,7 +10,6 @@ const socialLinks = [
     href: "mailto:zhuang.eddie@gmail.com",
     icon: MailIcon,
     label: "email",
-    iconClassName: "size-5",
   },
   { href: "https://github.com/edzhuang", icon: GitHubIcon, label: "github" },
   {
@@ -62,7 +61,7 @@ export default function Home() {
         <div className="mt-6 space-y-6">
           {experiences.map((exp) => (
             <div key={`${exp.company}-${exp.title}`}>
-              <div className="flex flex-row items-baseline justify-between gap-4">
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                 <p className="font-medium">
                   <a
                     href={exp.companyHref}
@@ -74,7 +73,7 @@ export default function Home() {
                   </a>{" "}
                   <span className="text-muted font-normal">{exp.title}</span>
                 </p>
-                <span className="text-muted shrink-0">{exp.date}</span>
+                <span className="text-muted sm:shrink-0">{exp.date}</span>
               </div>
               <p className="mt-1 text-sm text-muted">{exp.description}</p>
             </div>
@@ -106,7 +105,7 @@ export default function Home() {
       <footer className="mt-24 border-t border-foreground/10 pt-6 pb-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {socialLinks.map(({ href, icon: Icon, label, iconClassName }) => (
+            {socialLinks.map(({ href, icon: Icon, label }) => (
               <a
                 key={label}
                 href={href}
@@ -115,7 +114,7 @@ export default function Home() {
                 className="text-muted hover:text-foreground transition-colors"
                 aria-label={label}
               >
-                <Icon className={iconClassName ?? "size-4"} />
+                <Icon />
               </a>
             ))}
           </div>
