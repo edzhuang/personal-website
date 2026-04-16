@@ -104,7 +104,7 @@ export default function Home() {
 
       <footer className="mt-24 border-t border-foreground/10 pt-6 pb-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {socialLinks.map(({ href, icon: Icon, label }) => (
               <a
                 key={label}
@@ -114,7 +114,7 @@ export default function Home() {
                 className="text-muted hover:text-foreground transition-colors"
                 aria-label={label}
               >
-                <Icon />
+                <Icon size={20} />
               </a>
             ))}
           </div>
