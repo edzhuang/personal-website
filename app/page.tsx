@@ -35,7 +35,7 @@ export default function Home() {
               href="https://www.mcmaster.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground transition-colors"
+              className="animated-underline text-foreground"
             >
               mcmaster
             </a>
@@ -46,7 +46,7 @@ export default function Home() {
               href="https://bondbl.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground transition-colors"
+              className="animated-underline text-foreground"
             >
               bond
             </a>
@@ -67,7 +67,7 @@ export default function Home() {
                     href={exp.companyHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground underline underline-offset-4 hover:text-muted transition-colors"
+                    className="animated-underline text-foreground hover:text-muted"
                   >
                     {exp.company}
                   </a>{" "}
@@ -92,7 +92,7 @@ export default function Home() {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4 hover:text-muted transition-colors"
+                className="animated-underline font-medium hover:text-muted"
               >
                 {project.name}
               </a>
