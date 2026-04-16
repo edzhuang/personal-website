@@ -56,13 +56,13 @@ export default function Home() {
       </header>
 
       <section className="mt-16">
-        <h2 className="text-base font-medium text-muted tracking-normal">
+        <h2 className="text-base text-muted">
           experience
         </h2>
         <div className="mt-6 space-y-6">
           {experiences.map((exp) => (
             <div key={`${exp.company}-${exp.title}`}>
-              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+              <div className="flex flex-row items-baseline justify-between gap-4">
                 <p className="font-medium">
                   <a
                     href={exp.companyHref}
@@ -74,7 +74,7 @@ export default function Home() {
                   </a>{" "}
                   <span className="text-muted font-normal">{exp.title}</span>
                 </p>
-                <span className="text-sm text-muted sm:shrink-0">{exp.date}</span>
+                <span className="text-muted shrink-0">{exp.date}</span>
               </div>
               <p className="mt-1 text-sm text-muted">{exp.description}</p>
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16">
-        <h2 className="text-base font-medium text-muted tracking-normal">
+        <h2 className="text-base text-muted">
           projects
         </h2>
         <div className="mt-6 space-y-6">
