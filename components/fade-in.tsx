@@ -2,7 +2,7 @@
 
 import {
   useEffect,
-  useState,
+  useRef,
   type CSSProperties,
   type ElementType,
   type ReactNode,
@@ -21,20 +21,26 @@ export function FadeIn({
   className = "",
   children,
 }: FadeInProps) {
-  const [mounted, setMounted] = useState(false);
+  const elementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true);
+    const element = elementRef.current;
+    if (!element) return;
+
+    element.classList.remove("opacity-0");
+    element.classList.add("animate-fade-in");
   }, []);
 
-  const style: CSSProperties | undefined = mounted
-    ? { animationDelay: `${delay}ms` }
-    : undefined;
-  const animClass = mounted ? "animate-fade-in" : "opacity-0";
+  const style: CSSProperties = { animationDelay: `${delay}ms` };
 
   return (
-    <Tag className={`${className} ${animClass}`.trim()} style={style}>
+    <Tag
+      ref={(node: HTMLElement | null) => {
+        elementRef.current = node;
+      }}
+      className={`${className} opacity-0`.trim()}
+      style={style}
+    >
       {children}
     </Tag>
   );
