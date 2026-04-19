@@ -24,7 +24,13 @@ export function FadeIn({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const animationFrameId = window.requestAnimationFrame(() => {
+      setMounted(true);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   const style: CSSProperties | undefined = mounted
