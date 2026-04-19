@@ -24,13 +24,8 @@ export function FadeIn({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const animationFrameId = window.requestAnimationFrame(() => {
-      setMounted(true);
-    });
-
-    return () => {
-      window.cancelAnimationFrame(animationFrameId);
-    };
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
   }, []);
 
   const style: CSSProperties | undefined = mounted
