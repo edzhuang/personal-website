@@ -15,6 +15,12 @@ const INITIAL_STYLE: CSSProperties = {
   filter: "blur(8px)",
 };
 
+const FINAL_STYLE: CSSProperties = {
+  opacity: 1,
+  transform: "translateY(0)",
+  filter: "blur(0)",
+};
+
 export function FadeIn({
   as: Tag = "div",
   delay = 0,
@@ -28,26 +34,30 @@ export function FadeIn({
     if (!el) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-      el.style.filter = "none";
+      Object.assign(el.style, FINAL_STYLE);
       return;
     }
 
-    const animation = el.animate(
-      [
-        { opacity: 0, transform: "translateY(8px)", filter: "blur(8px)" },
-        { opacity: 1, transform: "translateY(0)", filter: "blur(0)" },
-      ],
-      {
-        duration: 600,
-        delay,
-        easing: "ease-out",
-        fill: "forwards",
-      },
-    );
+    let raf1 = 0;
+    let raf2 = 0;
 
-    return () => animation.cancel();
+    Object.assign(el.style, INITIAL_STYLE);
+    el.style.transition = "none";
+
+    raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(() => {
+        el.style.transitionProperty = "opacity, transform, filter";
+        el.style.transitionDuration = "900ms";
+        el.style.transitionTimingFunction = "ease-out";
+        el.style.transitionDelay = `${delay}ms`;
+        Object.assign(el.style, FINAL_STYLE);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+    };
   }, [delay]);
 
   return (
