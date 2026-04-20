@@ -29,11 +29,11 @@ export default function Home() {
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <p className="mt-1 text-muted">cs @ mcmaster</p>
+        <p className="mt-1 text-foreground/80">cs @ mcmaster</p>
       </FadeIn>
 
       <FadeIn as="section" delay={250} className="mt-16">
-        <h2 className="text-base text-foreground/70">
+        <h2 className="text-base text-foreground/80">
           experience
         </h2>
         <div className="mt-6 space-y-6">
@@ -49,7 +49,7 @@ export default function Home() {
                   >
                     {exp.company}
                   </a>{" "}
-                  <span className="text-foreground/70 font-normal">{exp.title}</span>
+                  <span className="text-foreground/80 font-normal">{exp.title}</span>
                 </p>
                 <span className="text-muted tabular-nums sm:shrink-0">{exp.date}</span>
               </div>
@@ -60,7 +60,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn as="section" delay={500} className="mt-16">
-        <h2 className="text-base text-foreground/70">
+        <h2 className="text-base text-foreground/80">
           projects
         </h2>
         <div className="mt-6 space-y-6">
