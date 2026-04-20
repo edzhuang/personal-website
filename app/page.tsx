@@ -51,7 +51,7 @@ export default function Home() {
                   </a>{" "}
                   <span className="text-muted font-normal">{exp.title}</span>
                 </p>
-                <span className="text-muted sm:shrink-0">{exp.date}</span>
+                <span className="text-sm text-muted tabular-nums sm:shrink-0">{exp.date}</span>
               </div>
               <p className="mt-1 text-sm text-muted">{exp.description}</p>
             </div>
