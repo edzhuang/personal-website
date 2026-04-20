@@ -3,13 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --muted: #ababab;
+  --muted: #6b6b6b;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --muted: #666666;
+  --muted: #8a8a8a;
 }
 
 @theme inline {
