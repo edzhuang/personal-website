@@ -29,7 +29,7 @@ export default function Home() {
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <p className="mt-1 text-foreground/70">cs @ mcmaster</p>
+        <p className="mt-1 text-muted">cs @ mcmaster</p>
       </FadeIn>
 
       <FadeIn as="section" delay={250} className="mt-16">
@@ -51,7 +51,7 @@ export default function Home() {
                   </a>{" "}
                   <span className="text-foreground/70 font-normal">{exp.title}</span>
                 </p>
-                <span className="text-foreground/35 tabular-nums sm:shrink-0">{exp.date}</span>
+                <span className="text-muted tabular-nums sm:shrink-0">{exp.date}</span>
               </div>
               <p className="mt-1 text-sm text-muted">{exp.description}</p>
             </div>
@@ -70,7 +70,7 @@ export default function Home() {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animated-underline font-medium hover:text-foreground/80"
+                className="animated-underline text-foreground font-medium hover:text-foreground/80"
               >
                 {project.name}
               </a>
