@@ -41,15 +41,22 @@ body {
 
 .fade-in {
   opacity: 0;
+  transform: translateY(8px);
+  filter: blur(8px);
+}
+
+.fade-in-ready {
   animation: fade-in 600ms ease-out both;
   will-change: opacity, transform, filter;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  .fade-in,
+  .fade-in-ready {
     opacity: 1;
     animation: none;
     transform: none;
+    filter: none;
   }
 }
 
