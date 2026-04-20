@@ -1,5 +1,13 @@
 export const experiences = [
   {
+    title: "ai solutions developer intern",
+    company: "bond brand loyalty",
+    companyHref: "https://bondbl.com",
+    date: "summer 2026 (incoming)",
+    description:
+      "developing ai tools and applications for loyalty marketing clients",
+  },
+  {
     title: "research assistant",
     company: "mcmaster university",
     companyHref: "https://mcmaster.ca",

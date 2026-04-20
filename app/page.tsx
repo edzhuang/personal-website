@@ -29,33 +29,10 @@ export default function Home() {
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <div>
-          <p className="mt-1 text-muted">
-            cs @{" "}
-            <a
-              href="https://www.mcmaster.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="animated-underline text-foreground hover:text-muted"
-            >
-              mcmaster
-            </a>
-          </p>
-          <p className="text-muted">
-            incoming @{" "}
-            <a
-              href="https://bondbl.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="animated-underline text-foreground hover:text-muted"
-            >
-              bond
-            </a>
-          </p>
-        </div>
+        <p className="mt-1 text-muted">cs @ mcmaster</p>
       </FadeIn>
 
-      <FadeIn as="section" delay={150} className="mt-16">
+      <FadeIn as="section" delay={250} className="mt-16">
         <h2 className="text-base text-muted">
           experience
         </h2>
@@ -82,7 +59,7 @@ export default function Home() {
         </div>
       </FadeIn>
 
-      <FadeIn as="section" delay={300} className="mt-16">
+      <FadeIn as="section" delay={500} className="mt-16">
         <h2 className="text-base text-muted">
           projects
         </h2>
@@ -105,7 +82,7 @@ export default function Home() {
 
       <FadeIn
         as="footer"
-        delay={450}
+        delay={750}
         className="mt-24 border-t border-foreground/10 pt-6 pb-8"
       >
         <div className="flex items-center justify-between">
