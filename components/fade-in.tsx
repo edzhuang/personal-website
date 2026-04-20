@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  type ElementType,
-  type ReactNode,
-} from "react";
+import { type ElementType, type ReactNode } from "react";
 
 type FadeInProps = {
   as?: ElementType;
@@ -20,21 +15,11 @@ export function FadeIn({
   className = "",
   children,
 }: FadeInProps) {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const raf = requestAnimationFrame(() => {
-      el.style.animationDelay = `${delay}ms`;
-      el.classList.add("animate-fade-in");
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [delay]);
-
   return (
-    <Tag ref={ref} className={`fade-in-initial ${className}`.trim()}>
+    <Tag
+      style={{ animationDelay: `${delay}ms` }}
+      className={`fade-in ${className}`.trim()}
+    >
       {children}
     </Tag>
   );
