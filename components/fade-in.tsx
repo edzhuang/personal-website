@@ -2,8 +2,7 @@
 
 import {
   useEffect,
-  useState,
-  type CSSProperties,
+  useRef,
   type ElementType,
   type ReactNode,
 } from "react";
@@ -21,19 +20,21 @@ export function FadeIn({
   className = "",
   children,
 }: FadeInProps) {
-  const [mounted, setMounted] = useState(false);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const el = ref.current;
+    if (!el) return;
 
-  const style: CSSProperties | undefined = mounted
-    ? { animationDelay: `${delay}ms` }
-    : undefined;
-  const animClass = mounted ? "animate-fade-in" : "opacity-0";
+    const raf = requestAnimationFrame(() => {
+      el.style.animationDelay = `${delay}ms`;
+      el.classList.add("animate-fade-in");
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [delay]);
 
   return (
-    <Tag className={`${className} ${animClass}`.trim()} style={style}>
+    <Tag ref={ref} className={`fade-in-initial ${className}`.trim()}>
       {children}
     </Tag>
   );
