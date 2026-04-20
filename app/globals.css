@@ -26,40 +26,6 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-    filter: blur(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(8px);
-  filter: blur(8px);
-}
-
-.fade-in-ready {
-  animation: fade-in 600ms ease-out both;
-  will-change: opacity, transform, filter;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in,
-  .fade-in-ready {
-    opacity: 1;
-    animation: none;
-    transform: none;
-    filter: none;
-  }
-}
-
 .animated-underline {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
