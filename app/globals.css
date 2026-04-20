@@ -30,17 +30,19 @@ body {
   from {
     opacity: 0;
     transform: translateY(8px);
+    filter: blur(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
 }
 
 .fade-in {
   opacity: 0;
-  animation: fade-in 600ms ease-out backwards;
-  will-change: opacity, transform;
+  animation: fade-in 600ms ease-out both;
+  will-change: opacity, transform, filter;
 }
 
 @media (prefers-reduced-motion: reduce) {
