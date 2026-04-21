@@ -45,7 +45,7 @@ export default function Home() {
                     href={exp.companyHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="animated-underline text-foreground hover:text-foreground/80"
+                    className="animated-underline text-foreground hover:text-foreground/70"
                   >
                     {exp.company}
                   </a>{" "}
@@ -70,7 +70,7 @@ export default function Home() {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animated-underline text-foreground font-medium hover:text-foreground/80"
+                className="animated-underline text-foreground font-medium hover:text-foreground/70"
               >
                 {project.name}
               </a>
