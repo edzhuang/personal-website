@@ -29,11 +29,11 @@ export default function Home() {
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <p className="mt-1 text-foreground/70">cs @ mcmaster</p>
+        <p className="mt-1 text-muted">cs @ mcmaster</p>
       </FadeIn>
 
       <FadeIn as="section" delay={250} className="mt-16">
-        <h2 className="text-base text-foreground/70">
+        <h2 className="text-base text-muted">
           experience
         </h2>
         <div className="mt-6 space-y-6">
@@ -45,11 +45,11 @@ export default function Home() {
                     href={exp.companyHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="animated-underline text-foreground hover:text-foreground/70"
+                    className="animated-underline text-foreground hover:text-muted"
                   >
                     {exp.company}
                   </a>{" "}
-                  <span className="text-foreground/70 font-normal">{exp.title}</span>
+                  <span className="text-muted font-normal">{exp.title}</span>
                 </p>
                 <span className="text-sm text-muted tabular-nums sm:shrink-0">{exp.date}</span>
               </div>
@@ -60,7 +60,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn as="section" delay={500} className="mt-16">
-        <h2 className="text-base text-foreground/70">
+        <h2 className="text-base text-muted">
           projects
         </h2>
         <div className="mt-6 space-y-6">
@@ -70,7 +70,7 @@ export default function Home() {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animated-underline text-foreground font-medium hover:text-foreground/70"
+                className="animated-underline text-foreground font-medium hover:text-muted"
               >
                 {project.name}
               </a>
