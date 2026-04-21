@@ -23,7 +23,7 @@ const socialLinks = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 py-16 md:py-24">
+    <main className="mx-auto w-full max-w-xl px-6 py-16 md:py-24">
       <FadeIn as="header" delay={0}>
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="mt-6 space-y-6">
           {experiences.map((exp) => (
             <div key={`${exp.company}-${exp.title}`}>
-              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+              <div className="flex flex-row items-center justify-between gap-4">
                 <p className="font-medium">
                   <a
                     href={exp.companyHref}
@@ -48,12 +48,11 @@ export default function Home() {
                     className="animated-underline text-foreground hover:text-muted"
                   >
                     {exp.company}
-                  </a>{" "}
-                  <span className="text-muted font-normal">{exp.title}</span>
+                  </a>
                 </p>
-                <span className="text-sm text-muted tabular-nums sm:shrink-0">{exp.date}</span>
+                <span className="text-sm text-muted tabular-nums shrink-0">{exp.date}</span>
               </div>
-              <p className="mt-1 text-sm text-muted">{exp.description}</p>
+              <p className="mt-1 text-sm text-muted">{exp.title}</p>
             </div>
           ))}
         </div>
