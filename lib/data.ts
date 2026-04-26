@@ -15,6 +15,11 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "aura-1",
+    href: "https://huggingface.co/edzhuang/aura-1",
+    description: "fine-tune of qwen2.5-vl-7b that achieves 91.7% on humanity's last exam",
+  },
+  {
     name: "typeset",
     href: "https://www.typeset.im",
     description: "ai-powered collaborative online latex editor",
