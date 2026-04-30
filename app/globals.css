@@ -27,7 +27,7 @@ body {
 }
 
 .fade-in {
-  animation: fade-in 900ms ease-out both;
+  animation: fade-in 900ms ease-out backwards;
   animation-delay: var(--fade-in-delay, 0ms);
 }
 
