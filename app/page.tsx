@@ -1,4 +1,3 @@
-import { FadeIn } from "@/components/fade-in";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { experiences, projects } from "@/lib/data";
 import { MailIcon, GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
@@ -24,15 +23,15 @@ const socialLinks = [
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-xl px-6 py-16 md:py-24">
-      <FadeIn as="header" delay={0}>
+      <header>
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <p className="mt-1 text-muted">cs @ mcmaster</p>
-      </FadeIn>
+        <p className="mt-1 text-muted">cs @ mcmaster · ai @ bond</p>
+      </header>
 
-      <FadeIn as="section" delay={250} className="mt-16">
+      <section className="mt-16">
         <h2 className="text-base text-muted">
           experience
         </h2>
@@ -59,9 +58,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </FadeIn>
+      </section>
 
-      <FadeIn as="section" delay={500} className="mt-16">
+      <section className="mt-16">
         <h2 className="text-base text-muted">
           projects
         </h2>
@@ -80,13 +79,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </FadeIn>
+      </section>
 
-      <FadeIn
-        as="footer"
-        delay={750}
-        className="mt-24 border-t border-foreground/10 pt-6 pb-8"
-      >
+      <footer className="mt-24 border-t border-foreground/10 pt-6 pb-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             {socialLinks.map(({ href, icon: Icon, label }) => (
@@ -131,7 +126,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </FadeIn>
+      </footer>
     </main>
   );
 }
