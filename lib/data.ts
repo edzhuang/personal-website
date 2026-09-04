@@ -1,9 +1,15 @@
 export const experiences = [
   {
+    title: "software developer intern",
+    company: "soti",
+    companyHref: "https://soti.net",
+    date: "sep 2026 - present",
+  },
+  {
     title: "ai engineer intern",
     company: "bond brand loyalty",
     companyHref: "https://bondbl.com",
-    date: "may 2026 - present",
+    date: "may 2026 - aug 2026",
   },
   {
     title: "undergraduate research assistant",
