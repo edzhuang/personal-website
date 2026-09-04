@@ -28,7 +28,7 @@ export default function Home() {
           <h1 className="text-2xl font-medium tracking-tight">eddie zhuang</h1>
           <ThemeToggle />
         </div>
-        <p className="mt-1 text-muted">cs @ mcmaster · ai @ bond</p>
+        <p className="mt-1 text-muted">cs @ mcmaster · software @ soti</p>
       </header>
 
       <section className="mt-16">
