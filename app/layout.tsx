@@ -21,11 +21,14 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   description: "cs @ mcmaster, software @ soti",
-  metadataBase: new URL("https://eddiezhuang.com"),
+  metadataBase: new URL("https://www.eddiezhuang.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "eddie zhuang",
     description: "cs @ mcmaster, software @ soti",
-    url: "https://eddiezhuang.com",
+    url: "https://www.eddiezhuang.com",
   },
 };
 
